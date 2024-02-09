@@ -8,7 +8,8 @@ This system provides a solution for resolving conflicts between xApps (cross app
 - Implements an auction algorithm to determine the final winner for each parameter.
 - Supports multiple xApps with multiple conflicting parameters.
 - Provides flexibility in defining objectives and parameters for each xApp.
-
+Limitations
+- The current auction algorithm is too simplistic and does not assure Incentive compatibility, individual rationality, and budget balance.
 ## Input Data
 The input data for the auction algorithm is provided in a CSV file. Each row represents a bid submitted by an xApp for a particular parameter. The CSV file should have the following format:
 
