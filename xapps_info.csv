@@ -1,0 +1,5 @@
+Name,ICPs,Objective
+MLB,"TTT, CIO, TXP, RET",Minimize Load and maximize Resource Utilization
+CCO,"TXP, RET",Maximize downlink throughput and minimize SINR
+ES,TXP,Maximize energy efficiency and minimize power consumption
+MRO,"TXP, TTT, CIO, NL, HYS",Maximize successful handover rate and minimize call drop rate & call block rate
