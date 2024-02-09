@@ -1,0 +1,47 @@
+import random
+
+class XApp:
+    def __init__(self, name, kpis):
+        self.name = name
+        self.kpis = kpis
+        
+    def generate_bid(self, parameter):
+        # Simplified linear bidding strategy based on performance KPIs
+        # Adjust coefficients based on the importance of KPIs for bidding
+        if parameter in self.kpis:
+            bid = sum(coeff * value for coeff, value in zip(self.coefficients[parameter], self.kpis[parameter]))
+            return max(0, bid)  # Ensure non-negative bid
+        else:
+            return 0  # Default bid if KPI is not relevant for the parameter
+
+# Example xApp performance KPIs
+xapp_kpis = {
+    'MLB': {'TTT': 0.8, 'CIO': 0.9, 'TXP': 0.7, 'RET': 0.85},
+    'CCO': {'TXP': 0.75, 'RET': 0.8},
+    'ES': {'TXP': 0.9},
+    'MRO': {'TXP': 0.85, 'TTT': 0.75, 'CIO': 0.8, 'NL': 0.7, 'HYS': 0.6}
+}
+
+# Example coefficients for bidding strategy (to be adjusted based on importance)
+coefficients = {
+    'TXP': [0.5, 0.3, 0.2, 0.1, 0.4],
+    'TTT': [0.3, 0.2, 0.1, 0.4, 0.5],
+    'CIO': [0.4, 0.3, 0.1, 0.2, 0.5],
+    'RET': [0.6, 0.4, 0.3, 0.2, 0.1],
+    'NL': [0.3, 0.2, 0.4, 0.1, 0.5],
+    'HYS': [0.2, 0.3, 0.1, 0.4, 0.5]
+}
+
+# Create xApp objects with their respective performance KPIs
+xapps = [XApp(name, kpis) for name, kpis in xapp_kpis.items()]
+for xapp in xapps:
+    xapp.coefficients = coefficients
+
+# Simulate bidding for a specific parameter
+parameter = 'TXP'
+print(f"Simulated Bidding for Parameter: {parameter}")
+print("XApp\t\tBid")
+print("-------------------")
+for xapp in xapps:
+    bid = xapp.generate_bid(parameter)
+    print(f"{xapp.name}\t\t{bid}")
