@@ -39,7 +39,7 @@ The input data for the auction algorithm is provided in a CSV file. Each row rep
 3. **Output**: The auction algorithm outputs the winning bids for each parameter, along with the corresponding xApp name and bid amount. These results can be used to resolve conflicts between xApps effectively.
 
 ## Example
-An example CSV file (`bids_data.csv`) and Python notebook (`auction_conflict_resolution.py`) are provided to demonstrate the usage of the system. You can customize the bids data according to your network environment and objectives.
+An example CSV file (`xapps_info.csv`) and Python notebook (`auction_conflict_resolution.py`) are provided to demonstrate the usage of the system. You can customize the bids data according to your network environment and objectives.
 ## References
 
 - Abdul Wadud, Fatemeh Golpayegani, and Nima Afraz. "Conflict Management in the Near-RT-RIC of Open RAN: A Game Theoretic Approach." 2023. [arXiv:2311.13389](https://arxiv.org/abs/2311.13389)
