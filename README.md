@@ -15,12 +15,12 @@ The input data for the auction algorithm is provided in a CSV file. Each row rep
 
 - **Columns**:
   - `xApp`: Name of the xApp submitting the bid.
-  - `ICP (Individual Control Parameter)`: The parameter for which the bid is submitted.
+  - `ICP (Input Control Parameter)`: The parameter for which the bid is submitted.
   - `Desired Value`: The desired value for the parameter.
   - `Bid Amount`: The amount bid by the xApp for the desired value.
 
 - **Example**:
-    xApp,ICP (Individual Control Parameter),Desired Value,Bid Amount
+    xApp,ICP (Input Control Parameter),Desired Value,Bid Amount
     MLB,TXP,10,50
     MLB,TXP,15,30
     MLB,TTT,5,20
